@@ -1,7 +1,3 @@
-The extracted files indicate that the application is likely a Node.js project. Below is the content for the `README.md` file, along with a brief design document.
-
-### README.md
-
 ```markdown
 # Payment Service
 
@@ -112,8 +108,3 @@ The application follows a typical MVC (Model-View-Controller) pattern:
 - Implement more robust logging.
 - Add support for more payment methods.
 ```
-
-Would you like any specific details or changes in the provided files? 
-
-**a.** Add unit tests for the payment service.  
-**b.** Set up continuous integration for the project.
