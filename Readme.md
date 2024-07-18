@@ -1,4 +1,3 @@
-```markdown
 # Payment Service
 
 ## Overview
@@ -25,10 +24,8 @@ The Payment Service is a Node.js application designed to handle payment processi
 3. **Environment Variables:**
     Create a `.env` file in the root directory with the following content:
     ```
-    DB_HOST=<your-database-host>
-    DB_USER=<your-database-user>
-    DB_PASS=<your-database-password>
-    DB_NAME=<your-database-name>
+    PORT=<your-port-number>
+    MONGO_URI=<your-mongodb-url>
     ```
 
 4. **Run the application:**
@@ -59,24 +56,19 @@ npm test
 ```
 
 ## Project Structure
-
 - `index.js` - Entry point of the application
 - `config/db.js` - Database configuration
 - `controllers/paymentController.js` - Controller for payment operations
 - `models/paymentModel.js` - Mongoose model for payment data
 - `routes/paymentRoutes.js` - Express routes for payment endpoints
 - `docs/swagger.js` - Swagger documentation setup
-```
 
-### Design Document
+## Design Document
 
-```markdown
-# Design Document: Payment Service
-
-## Introduction
+### Introduction
 The Payment Service is designed to provide a scalable and robust system for managing payment processing. It offers RESTful APIs for creating, retrieving, updating, and deleting payment records.
 
-## Architecture
+### Architecture
 The application follows a typical MVC (Model-View-Controller) pattern:
 
 - **Model:** Defines the schema for payment data using Mongoose.
@@ -84,13 +76,13 @@ The application follows a typical MVC (Model-View-Controller) pattern:
 - **Controller:** Handles the business logic for payment operations.
 - **Routes:** Defines the API endpoints and links them to the appropriate controller methods.
 
-## Components
+### Components
 
-### Database
+#### Database
 - **MongoDB** is used as the database to store payment records.
 - Configuration is handled in `config/db.js`.
 
-### API Endpoints
+#### API Endpoints
 - **POST /payments:** Create a new payment.
 - **GET /payments:** Retrieve all payments.
 - **GET /payments/:id:** Retrieve a specific payment by ID.
@@ -103,8 +95,7 @@ The application follows a typical MVC (Model-View-Controller) pattern:
 ### Validation
 - Request data validation is performed using middleware.
 
-## Future Enhancements
+### Future Enhancements
 - Add authentication and authorization.
 - Implement more robust logging.
 - Add support for more payment methods.
-```
